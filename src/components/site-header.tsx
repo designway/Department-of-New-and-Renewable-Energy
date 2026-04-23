@@ -45,7 +45,7 @@ export function SiteHeader() {
         <HeaderLeaders className="ml-auto" />
 
         <div className="ml-auto md:hidden">
-          <MobileNavDrawer items={mobileNav} title="DNRE Goa" />
+          <MobileNavDrawer items={mobileNav} title="Department of New and Renewable Energy" />
         </div>
       </div>
 

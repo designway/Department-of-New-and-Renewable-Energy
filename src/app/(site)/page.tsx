@@ -15,6 +15,7 @@ import {
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import { HeroAnimations } from "@/components/hero-animations";
 import { schemes, notifications } from "@/lib/mock-data";
 import { formatCurrency, formatDate } from "@/lib/utils";
 
@@ -51,7 +52,8 @@ export default function Home() {
             <rect width="100%" height="100%" fill="url(#grid)" />
           </svg>
         </div>
-        <div className="container relative py-16 md:py-24">
+        <HeroAnimations />
+        <div className="container relative py-12 md:py-16 xl:py-20">
           <div className="max-w-3xl">
             <Badge variant="warning" className="bg-saffron text-white border-0 mb-4">
               Integrated Web Portal • EOI 2026

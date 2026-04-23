@@ -23,7 +23,10 @@
       "Bash(cp /Users/omkar/Downloads/images-5.jpeg /Users/omkar/Coding/Websites/DNRE/public/images/minister.jpg)",
       "Bash(xargs -0 -I{} cp \"{}\" /tmp/)",
       "Read(//private/tmp/**)",
-      "Bash(xargs -I{} cp \"{}\" /Users/omkar/Coding/Websites/DNRE/public/images/director.png)"
+      "Bash(xargs -I{} cp \"{}\" /Users/omkar/Coding/Websites/DNRE/public/images/director.png)",
+      "Bash(python3 -c ' *)",
+      "Bash(python3)",
+      "Bash(npm uninstall *)"
     ]
   }
 }

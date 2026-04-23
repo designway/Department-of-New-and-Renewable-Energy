@@ -4,7 +4,7 @@ import "./globals.css";
 export const metadata: Metadata = {
   title: {
     default: "Department of New and Renewable Energy, Government of Goa",
-    template: "%s | DNRE Goa",
+    template: "%s | Department of New and Renewable Energy, Goa",
   },
   description:
     "Official portal of the Department of New and Renewable Energy, Government of Goa — schemes, subsidies, notifications, and citizen services.",

@@ -10,9 +10,9 @@ export function SiteFooter() {
         <div className="md:col-span-1">
           <div className="flex items-center gap-3 mb-3">
             <Emblem className="h-10 w-10" />
-            <div>
-              <div className="text-sm font-semibold">DNRE Goa</div>
-              <div className="text-xs text-muted-foreground">Government of Goa</div>
+            <div className="min-w-0 leading-tight">
+              <div className="text-[11px] text-muted-foreground">Government of Goa</div>
+              <div className="text-sm font-semibold">Department of New and Renewable Energy</div>
             </div>
           </div>
           <p className="text-xs text-muted-foreground leading-relaxed">
