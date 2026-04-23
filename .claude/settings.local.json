@@ -1,0 +1,29 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm install *)",
+      "Bash(npm run *)",
+      "Bash(curl -s -o /dev/null -w \"Home: %{http_code}\\\\n\" http://localhost:3000/)",
+      "Bash(curl -s -o /dev/null -w \"Schemes: %{http_code}\\\\n\" http://localhost:3000/schemes)",
+      "Bash(curl -s -o /dev/null -w \"Scheme detail: %{http_code}\\\\n\" http://localhost:3000/schemes/rooftop-solar-subsidy)",
+      "Bash(curl -s -o /dev/null -w \"Portal: %{http_code}\\\\n\" http://localhost:3000/portal)",
+      "Bash(curl -s -o /dev/null -w \"Home: %{http_code}\\\\n\" http://localhost:3001/)",
+      "Bash(curl -s -o /dev/null -w \"Schemes: %{http_code}\\\\n\" http://localhost:3001/schemes)",
+      "Bash(curl -s -o /dev/null -w \"Scheme detail: %{http_code}\\\\n\" http://localhost:3001/schemes/rooftop-solar-subsidy)",
+      "Bash(curl -s -o /dev/null -w \"Portal login: %{http_code}\\\\n\" http://localhost:3001/portal)",
+      "Bash(curl -s -o /dev/null -w \"Notifications: %{http_code}\\\\n\" http://localhost:3001/notifications)",
+      "Bash(curl -s -o /dev/null -w \"Dashboard \\(applicant\\): %{http_code}\\\\n\" -H \"Cookie: dnre_role=applicant; dnre_user_id=usr-101\" http://localhost:3001/portal/dashboard)",
+      "Bash(curl -s -o /dev/null -w \"Applications list: %{http_code}\\\\n\" -H \"Cookie: dnre_role=applicant; dnre_user_id=usr-101\" http://localhost:3001/portal/applications)",
+      "Bash(curl -s -o /dev/null -w \"Application detail: %{http_code}\\\\n\" -H \"Cookie: dnre_role=applicant; dnre_user_id=usr-101\" http://localhost:3001/portal/applications/APP-2025-0417)",
+      "Bash(curl -s -o /dev/null -w \"New application: %{http_code}\\\\n\" -H \"Cookie: dnre_role=applicant; dnre_user_id=usr-101\" http://localhost:3001/portal/applications/new)",
+      "Bash(curl -s -o /dev/null -w \"Sanctions: %{http_code}\\\\n\" -H \"Cookie: dnre_role=applicant; dnre_user_id=usr-101\" http://localhost:3001/portal/sanctions)",
+      "Bash(kill %1)",
+      "Bash(pkill -f \"next dev\")",
+      "Bash(cp \"/Users/omkar/Downloads/Dr Pramod Sawant.jpg\" /Users/omkar/Coding/Websites/DNRE/public/images/cm.jpg)",
+      "Bash(cp /Users/omkar/Downloads/images-5.jpeg /Users/omkar/Coding/Websites/DNRE/public/images/minister.jpg)",
+      "Bash(xargs -0 -I{} cp \"{}\" /tmp/)",
+      "Read(//private/tmp/**)",
+      "Bash(xargs -I{} cp \"{}\" /Users/omkar/Coding/Websites/DNRE/public/images/director.png)"
+    ]
+  }
+}
