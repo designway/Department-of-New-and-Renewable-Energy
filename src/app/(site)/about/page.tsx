@@ -20,8 +20,8 @@ export default function AboutPage() {
 
       <section className="container py-12">
         <Card className="overflow-hidden">
-          <div className="grid md:grid-cols-[auto,1fr]">
-            <div className="bg-primary text-primary-foreground p-8 flex flex-col items-center justify-center text-center md:w-64">
+          <div className="grid grid-cols-1 md:grid-cols-[auto,1fr]">
+            <div className="bg-primary text-primary-foreground p-6 md:p-8 flex flex-col items-center justify-center text-center md:w-64">
               <div className="relative h-32 w-32 rounded-full overflow-hidden border-4 border-white shadow-xl mb-4 bg-white">
                 <Image
                   src="/images/director.png"
@@ -36,7 +36,7 @@ export default function AboutPage() {
               <div className="text-sm text-white/80 mt-1">Director</div>
               <div className="text-xs text-white/70 mt-0.5">New and Renewable Energy</div>
             </div>
-            <div className="p-8">
+            <div className="p-6 md:p-8">
               <div className="text-xs text-muted-foreground uppercase tracking-wide mb-2">
                 From the Director&apos;s Desk
               </div>

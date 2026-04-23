@@ -61,7 +61,7 @@ export default function ReportsPage() {
         </Button>
       </div>
 
-      <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-6">
+      <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 md:gap-4 mb-6">
         <StatCard label="Total disbursed" value={formatCurrency(totalDisbursed)} icon={<IndianRupee className="h-5 w-5" />} trend={{ value: "+12% vs last FY", positive: true }} />
         <StatCard label="Beneficiaries" value={totalBeneficiaries.toLocaleString("en-IN")} icon={<Users className="h-5 w-5" />} trend={{ value: "+284 this quarter", positive: true }} />
         <StatCard label="Approval rate" value={`${approvalRate}%`} icon={<TrendingUp className="h-5 w-5" />} trend={{ value: "+3% vs last quarter", positive: true }} />

@@ -2,7 +2,8 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Emblem } from "@/components/emblem";
 import { HeaderLeaders } from "@/components/header-leaders";
-import { Menu, Search, UserCircle } from "lucide-react";
+import { MobileNavDrawer } from "@/components/mobile-nav-drawer";
+import { Search, UserCircle, Home, Info, FileText, Bell, HelpCircle, Mail, LogIn, Sparkles } from "lucide-react";
 
 const nav = [
   { href: "/", label: "Home" },
@@ -13,29 +14,39 @@ const nav = [
   { href: "/contact", label: "Contact" },
 ];
 
+const mobileNav = [
+  { href: "/", label: "Home", icon: <Home className="h-4 w-4" /> },
+  { href: "/about", label: "About", icon: <Info className="h-4 w-4" /> },
+  { href: "/schemes", label: "Schemes", icon: <FileText className="h-4 w-4" /> },
+  { href: "/notifications", label: "Notifications", icon: <Bell className="h-4 w-4" /> },
+  { href: "/faqs", label: "FAQs", icon: <HelpCircle className="h-4 w-4" /> },
+  { href: "/contact", label: "Contact", icon: <Mail className="h-4 w-4" /> },
+  { href: "/portal", label: "Citizen Login", icon: <LogIn className="h-4 w-4" /> },
+  { href: "/schemes", label: "Apply Now", icon: <Sparkles className="h-4 w-4" /> },
+];
+
 export function SiteHeader() {
   return (
     <header className="sticky top-0 z-40 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/80">
-      <div className="container flex h-20 items-center gap-4">
-        <Link href="/" className="flex items-center gap-3 min-w-0">
-          <Emblem className="h-12 w-12 shrink-0" />
-          <div className="hidden sm:block min-w-0">
-            <div className="text-xs leading-tight text-muted-foreground">Government of Goa</div>
-            <div className="text-base font-semibold leading-tight truncate">
+      <div className="container flex h-16 md:h-20 items-center gap-3 md:gap-4">
+        <Link href="/" className="flex items-center gap-2 md:gap-3 min-w-0">
+          <Emblem className="h-10 w-10 md:h-12 md:w-12 shrink-0" />
+          <div className="min-w-0 leading-tight">
+            <div className="text-[10px] md:text-xs text-muted-foreground">Government of Goa</div>
+            <div className="text-[13px] sm:text-sm md:text-base font-semibold">
               Department of New and Renewable Energy
             </div>
-            <div className="text-xs leading-tight text-muted-foreground">
+            <div className="text-[10px] md:text-xs text-muted-foreground hidden md:block">
               नवीन एवं नवीकरणीय ऊर्जा विभाग
             </div>
           </div>
-          <div className="sm:hidden text-sm font-semibold">DNRE Goa</div>
         </Link>
 
         <HeaderLeaders className="ml-auto" />
 
-        <button className="md:hidden ml-auto h-9 w-9 flex items-center justify-center rounded-md hover:bg-accent" aria-label="Menu">
-          <Menu className="h-5 w-5" />
-        </button>
+        <div className="ml-auto md:hidden">
+          <MobileNavDrawer items={mobileNav} title="DNRE Goa" />
+        </div>
       </div>
 
       <nav className="border-t hidden md:block">

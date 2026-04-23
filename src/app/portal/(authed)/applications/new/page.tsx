@@ -53,11 +53,32 @@ export default function NewApplicationPage() {
         <h1 className="text-2xl font-semibold tracking-tight">New Subsidy Application</h1>
       </div>
 
-      {/* Stepper */}
-      <div className="mb-6 overflow-x-auto">
-        <ol className="flex items-center gap-2 min-w-max">
+      {/* Stepper — mobile: current step label + progress dots; desktop: full horizontal */}
+      <div className="mb-6">
+        <div className="md:hidden">
+          <div className="flex items-center justify-between mb-2">
+            <div className="text-xs text-muted-foreground tabular-nums">
+              Step {step + 1} of {steps.length}
+            </div>
+            <div className="text-sm font-semibold">{steps[step]}</div>
+          </div>
+          <div className="flex gap-1.5">
+            {steps.map((_, i) => (
+              <div
+                key={i}
+                className={cn(
+                  "h-1.5 flex-1 rounded-full transition-colors",
+                  i < step && "bg-emerald",
+                  i === step && "bg-primary",
+                  i > step && "bg-muted"
+                )}
+              />
+            ))}
+          </div>
+        </div>
+        <ol className="hidden md:flex items-center gap-2 overflow-x-auto">
           {steps.map((s, i) => (
-            <li key={s} className="flex items-center gap-2">
+            <li key={s} className="flex items-center gap-2 shrink-0">
               <div
                 className={cn(
                   "h-8 w-8 rounded-full flex items-center justify-center text-xs font-semibold shrink-0",
@@ -78,12 +99,12 @@ export default function NewApplicationPage() {
       </div>
 
       <Card>
-        <CardContent className="p-6 min-h-[360px]">
+        <CardContent className="p-4 md:p-6 min-h-[360px]">
           {step === 0 && (
             <div>
               <h3 className="text-lg font-semibold mb-1">Choose a scheme</h3>
               <p className="text-sm text-muted-foreground mb-5">Select the scheme you want to apply under.</p>
-              <div className="grid md:grid-cols-2 gap-3">
+              <div className="grid sm:grid-cols-2 gap-3">
                 {schemes.filter((s) => s.status === "Active").map((s) => (
                   <button
                     key={s.id}

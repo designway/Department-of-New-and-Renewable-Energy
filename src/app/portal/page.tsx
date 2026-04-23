@@ -19,15 +19,18 @@ export default async function PortalLoginPage() {
     <div className="min-h-screen flex flex-col bg-muted/30">
       <header className="border-b bg-background">
         <div className="container h-16 flex items-center justify-between">
-          <Link href="/" className="flex items-center gap-3">
-            <Emblem className="h-9 w-9" />
-            <div>
-              <div className="text-xs text-muted-foreground leading-none">Government of Goa</div>
-              <div className="text-sm font-semibold leading-tight">DNRE Citizen Portal</div>
+          <Link href="/" className="flex items-center gap-2 md:gap-3 min-w-0">
+            <Emblem className="h-9 w-9 md:h-10 md:w-10 shrink-0" />
+            <div className="min-w-0 leading-tight">
+              <div className="text-[10px] md:text-xs text-muted-foreground">Government of Goa</div>
+              <div className="text-[12px] sm:text-sm md:text-[15px] font-semibold truncate">
+                Department of New and Renewable Energy
+              </div>
+              <div className="text-[10px] md:text-xs text-muted-foreground hidden sm:block">Citizen Portal</div>
             </div>
           </Link>
-          <Link href="/" className="text-sm text-muted-foreground hover:text-foreground">
-            ← Back to website
+          <Link href="/" className="text-xs sm:text-sm text-muted-foreground hover:text-foreground shrink-0 ml-2">
+            ← <span className="hidden sm:inline">Back to website</span>
           </Link>
         </div>
       </header>
